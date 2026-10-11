@@ -1,0 +1,7 @@
+1. Workflow vs agent: correct. Code fixes the steps in a workflow, and the model decides them in an agent. To make it interview-ready, add why it matters: workflows are predictable and easy to test, while agents are flexible but harder to test.
+
+2. MCP: mostly correct, with one fix. You are right that MCP is a connector standard and that it doesn’t produce answers or intelligence. The fix is the phrase “it won’t generate any prompt.” MCP servers can expose three kinds of things: tools (actions), resources (data) and prompts (reusable prompt templates). So MCP can carry prompt templates, but the model itself still writes the answers. A stronger version for your flashcard:
+
+MCP is an open standard that connects AI apps to tools, data and prompt templates through servers. It adds no intelligence. The model still does the reasoning.
+
+3. What surprised you: a good insight. Seeing how the terms depend on each other is the point of Day 1. To make it sharper, say it as layers: ML is the discipline underneath, an LLM like Claude is the brain, an agent is the LLM running in a loop, and MCP is how that agent reaches tools and data. If you can say that in 2 minutes without notes, Day 1 is fully learned.
