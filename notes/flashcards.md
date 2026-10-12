@@ -79,3 +79,45 @@ Add 5-8 question and answer pairs per day. Cover the answer, say it aloud, then 
 **Q:** How do you check for null in Python?
 
 **A:** Use `x is None`, not `x == None`.
+
+## Day 3: Pandas basics
+
+**Q:** DataFrame vs Series?
+
+**A:** A DataFrame is a 2D table with named columns. A Series is a single column, a 1D labeled array.
+
+---
+
+**Q:** `loc` vs `iloc`?
+
+**A:** `loc` selects by label (row labels and column names). `iloc` selects by integer position.
+
+---
+
+**Q:** How do you find missing values?
+
+**A:** `df.isna().sum()` gives the count of missing values per column.
+
+---
+
+**Q:** How do you filter rows with two conditions?
+
+**A:** Wrap each condition in parentheses and use `&` or `|`, for example `df[(df["a"] == 1) & (df["b"] == 2)]`. Do not use `and` or `or`.
+
+---
+
+**Q:** Why did my change to the DataFrame disappear?
+
+**A:** Most pandas methods return a new object instead of changing the original. Assign the result back, for example `df = df.drop_duplicates()`.
+
+---
+
+**Q:** What do you check first when you load a dataset?
+
+**A:** `shape`, `info()` and `head()`: the size, column types, missing counts and a sample of rows.
+
+---
+
+**Q:** Why does data cleaning matter for AI and ML?
+
+**A:** Models learn from whatever data they get. Duplicates, missing values and inconsistent labels lead to unreliable results. Garbage in, garbage out.
