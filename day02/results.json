@@ -1,0 +1,5 @@
+[
+  {"name": "login_test", "status": "passed", "duration": 1.2},
+  {"name": "checkout_test", "status": "failed", "duration": 3.4},
+  {"name": "search_test", "status": "passed", "duration": 0.8}
+]
