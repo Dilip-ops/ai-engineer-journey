@@ -121,3 +121,45 @@ Add 5-8 question and answer pairs per day. Cover the answer, say it aloud, then 
 **Q:** Why does data cleaning matter for AI and ML?
 
 **A:** Models learn from whatever data they get. Duplicates, missing values and inconsistent labels lead to unreliable results. Garbage in, garbage out.
+
+## Day 4: SQL basics
+
+**Q:** What is the difference between `WHERE` and `HAVING`?
+
+**A:** `WHERE` filters individual rows before grouping. `HAVING` filters groups after aggregation, so it can use aggregate functions.
+
+---
+
+**Q:** In what order does a database process a SELECT query?
+
+**A:** FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT.
+
+---
+
+**Q:** `COUNT(*)` vs `COUNT(column)`?
+
+**A:** `COUNT(*)` counts all rows. `COUNT(column)` counts only rows where that column is not NULL.
+
+---
+
+**Q:** How do you check for NULL in SQL?
+
+**A:** Use `IS NULL` or `IS NOT NULL`. `= NULL` is never true.
+
+---
+
+**Q:** Why pair `LIMIT` with `ORDER BY`?
+
+**A:** Without an order, which rows come back is not guaranteed. Ordering makes "top N" meaningful.
+
+---
+
+**Q:** Can you use a SELECT alias in `WHERE`?
+
+**A:** No, because `WHERE` runs before `SELECT`. You can use the alias in `ORDER BY`.
+
+---
+
+**Q:** Why does a QA engineer need SQL?
+
+**A:** To verify data after tests, set up and clean test data, and investigate failures by querying the database directly.

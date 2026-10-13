@@ -1,0 +1,6 @@
+test_name,status,duration,browser
+login_test,passed,1.2,chrome
+checkout_test,failed,3.4,chrome
+search_test,passed,,firefox
+login_test,passed,1.2,chrome
+profile_test,PASSED,0.9,firefox
