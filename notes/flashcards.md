@@ -163,3 +163,45 @@ Add 5-8 question and answer pairs per day. Cover the answer, say it aloud, then 
 **Q:** Why does a QA engineer need SQL?
 
 **A:** To verify data after tests, set up and clean test data, and investigate failures by querying the database directly.
+
+## Day 5: SQL joins
+
+**Q:** What is the difference between INNER JOIN and LEFT JOIN?
+
+**A:** INNER JOIN keeps only rows with a match in both tables. LEFT JOIN keeps every row from the left table, with NULLs where the right table has no match.
+
+---
+
+**Q:** What are a primary key and a foreign key?
+
+**A:** A primary key uniquely identifies each row in a table. A foreign key references another table's primary key.
+
+---
+
+**Q:** How do you find rows with no match in another table?
+
+**A:** LEFT JOIN, then filter `right_table.key IS NULL`.
+
+---
+
+**Q:** What is a Cartesian product?
+
+**A:** Every row of one table paired with every row of the other. It happens when a join has no `ON` condition or a wrong one.
+
+---
+
+**Q:** Why can a join return more rows than either table?
+
+**A:** When one row matches several rows on the other side, you get one result row per match.
+
+---
+
+**Q:** `ON` vs `WHERE` in a LEFT JOIN?
+
+**A:** A `WHERE` filter on the right table removes the NULL rows and turns the LEFT JOIN into an INNER JOIN. Put right-table filters in `ON`.
+
+---
+
+**Q:** Why count with `COUNT(r.id)` after a LEFT JOIN?
+
+**A:** `COUNT(*)` counts the NULL-filled row as 1. `COUNT(r.id)` skips NULLs, so unmatched rows count as 0.
