@@ -205,3 +205,45 @@ Add 5-8 question and answer pairs per day. Cover the answer, say it aloud, then 
 **Q:** Why count with `COUNT(r.id)` after a LEFT JOIN?
 
 **A:** `COUNT(*)` counts the NULL-filled row as 1. `COUNT(r.id)` skips NULLs, so unmatched rows count as 0.
+
+## Day 6: LLM basics
+
+**Q:** How does an LLM generate text?
+
+**A:** It predicts a probability for every possible next token, picks one, appends it and repeats, building the answer one token at a time.
+
+---
+
+**Q:** What is a token?
+
+**A:** A chunk of text the model reads and writes: a word, part of a word, punctuation or code. In English, roughly four characters or three-quarters of a word.
+
+---
+
+**Q:** What is a context window?
+
+**A:** The maximum number of tokens the model can handle at once: system prompt, conversation, documents and the response itself.
+
+---
+
+**Q:** Does an LLM remember earlier conversations on its own?
+
+**A:** No. Each call starts fresh. Apps resend the history, and memory features put saved text back into the context.
+
+---
+
+**Q:** What does temperature do?
+
+**A:** It controls randomness when the next token is chosen. Low is focused and repeatable, higher is more varied and less reliable.
+
+---
+
+**Q:** Is temperature 0 fully deterministic?
+
+**A:** Not guaranteed. It is much more repeatable, but tests should not rely on exact matches.
+
+---
+
+**Q:** Why do longer contexts cost more?
+
+**A:** Providers charge by tokens processed, and the model reprocesses the whole context on every call.

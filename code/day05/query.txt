@@ -1,0 +1,7 @@
+python3 run_query.py "SELECT r.id, r.test_name, r.status, c.module, c.owner FROM test_runs r INNER JOIN test_cases c ON r.test_name = c.test_name"
+
+python3 run_query.py "SELECT c.test_name, c.module FROM test_cases c LEFT JOIN test_runs r ON c.test_name = r.test_name WHERE r.id IS NULL"
+
+python3 run_query.py "SELECT c.module, COUNT(*) AS failures FROM test_runs r INNER JOIN test_cases c ON r.test_name = c.test_name WHERE r.status = 'failed' GROUP BY c.module"
+
+python3 run_query.py "SELECT c.owner, ROUND(AVG(r.duration), 2) AS avg_duration FROM test_runs r INNER JOIN test_cases c ON r.test_name = c.test_name GROUP BY c.owner"
