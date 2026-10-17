@@ -247,3 +247,33 @@ Add 5-8 question and answer pairs per day. Cover the answer, say it aloud, then 
 **Q:** Why do longer contexts cost more?
 
 **A:** Providers charge by tokens processed, and the model reprocesses the whole context on every call.
+
+## Day 7: Project 1 and Week 1 review
+
+**Q:** What does `pd.read_sql_query(sql, conn)` do?
+
+**A:** It runs a SQL query on the database connection and returns the result as a DataFrame.
+
+---
+
+**Q:** How do you compute a pass rate in pandas?
+
+**A:** The mean of a boolean column gives the fraction, for example `(df["status"] == "passed").mean() * 100`.
+
+---
+
+**Q:** Why write expected results before you run your code?
+
+**A:** It turns "looks right" into a testable check and catches mistakes early.
+
+---
+
+**Q:** What is an error log for?
+
+**A:** Recording each mistake with its root cause and fix, so you review patterns weekly instead of repeating them.
+
+---
+
+**Q:** Why keep functions separate from `main()` in a script?
+
+**A:** Other files, such as tests, can import and call the functions without running the whole script. `if __name__ == "__main__":` stops `main()` from running on import.
