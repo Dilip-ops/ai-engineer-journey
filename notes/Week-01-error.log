@@ -1,0 +1,12 @@
+# Project Error Log
+
+| Date | Topic | Mistake | Root Cause | Fix |
+| :--- | :--- | :--- | :--- | :--- |
+| Oct 12 | Python setup | `python: command not found` | macOS uses `python3` until a venv is active | Use `python3` to create the venv, then `python` inside it |
+| Oct 13 | Running scripts | `analyze.py` not found | Terminal was in the wrong folder | Run `pwd` and `ls`, then `cd` to the script's folder |
+| Oct 13 | VS Code | pandas import warning | Wrong interpreter selected | Select the `.venv` interpreter |
+| Oct 14 | SQL | Used HAVING on a raw column | Mixed up WHERE vs HAVING | WHERE filters rows, HAVING filters groups |
+| Oct 15 | Python | Swapped list and tuple mutability | Memorised, not understood | List = mutable, tuple = immutable |
+
+
+| Oct18 | Is temperature 0 fully deterministic? No. More repeatable, but not guaranteed identical, because of floating-point differences.
