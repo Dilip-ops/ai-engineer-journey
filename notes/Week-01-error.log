@@ -10,3 +10,7 @@
 
 
 | Oct18 | Is temperature 0 fully deterministic? No. More repeatable, but not guaranteed identical, because of floating-point differences.
+
+Oct 18, LEFT JOIN: wrote 0 for unmatched rows. Root cause: confused NULL with zero. Fix: unmatched right-side columns are NULL.
+Oct 18, Cartesian product: gave the idea but not the rule. Fix: rows(A) × rows(B), caused by a missing or wrong ON.
+
